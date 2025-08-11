@@ -1,11 +1,9 @@
 <template>
     <div>
-        <!-- Botão Flutuante -->
         <button class="chat-button" @click="isChatOpen = !isChatOpen">
-            💬
+            <MessageCircleMore class="iconMsg" />
         </button>
 
-        <!-- Janela do Chat -->
         <div v-if="isChatOpen" class="chat-window">
             <div class="chat-header">
                 <span>
@@ -23,48 +21,98 @@
                     Este é o ínicio da sua conversação connosco.
                 </p>
                 <div class="container-message">
-                    <div class="chat-message bot">
 
-                        <div class="message">
-                            <div class="msg">Olá, sou o Tobi</div>
+                    <div class="container-messages">
+                        <div class="msg-symbol">
+                            <MessageSquareText class="icon-symbol" />
+                        </div>
+                        <div class="chat-messages">
+                            <div class="chat-message bot">
+                                <div class="message">
+                                    <div class="msg">
+                                        Olá, sou o Tobbi
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="data-share-msg">
+                                <span>Tobi</span>
+                                <div class="separateMsg"></div>
+                                <div class="hours-chat">20:20</div>
+                            </div>
+
+
                         </div>
 
 
                     </div>
 
-                    <div class="chat-message bot">
-                        <div class="msg">
-                            <div class="message">
-                                <div class="msg">
-                                    Bem-vindo à Vodacom. Por favor, selecione um idioma / Welcome to Vodacom Please
-                                    Select A
-                                    Language
-                                    <br />1. Portuguese<br />2. English
+                    <div class="chat-message user">
 
+                        <div class="message">
+                            <div class="msg">Olá, sou o Jr</div>
+                        </div>
+                        <div class="data-share-msg user-hours">
+                            <span>Você</span>
+                            <div class="separateMsg"></div>
+                            <div class="hours-chat">20:20</div>
+                        </div>
+                    </div>
+                    <div class="container-messages">
+                        <div class="msg-symbol">
+                            <MessageSquareText class="icon-symbol" />
+                        </div>
+                        <div class="chat-messages">
+                            <div class="chat-message bot">
+                                <div class="message">
+                                    <div class="msg">
+                                        Bem-vindo à Vodacom. Por favor, selecione um idioma / Welcome to Vodacom
+                                        Please
+                                        Select A
+                                        Language
+                                        <br />1. Portuguese<br />2. English
+                                    </div>
+                                </div>
+
+                                <div class="message">
+                                    <div class="msg">
+                                        Escolha
+                                    </div>
                                 </div>
 
                             </div>
+                            <div class="data-share-msg">
+                                <span>Tobi</span>
+                                <div class="separateMsg"></div>
+                                <div class="hours-chat">20:20</div>
+                            </div>
                         </div>
+
+
                     </div>
+
+
                 </div>
-
-
-
-
-
 
                 <div class="user-messages">
                     <div v-for="(msg, index) in messages" :key="index" class="chat-message user">
-                        <div class="message"><div class="msg">{{ msg }}</div></div>
+                        <div class="message">
+                            <div class="msg">{{ msg }}</div>
+                        </div>
+                        
                     </div>
+                    <div class="data-share-msg user-hours" :style="{display: messages.length>0? 'flex':'none'}">
+                            <span>Você</span>
+                            <div class="separateMsg"></div>
+                            <div class="hours-chat">20:20</div>
+                        </div>
                 </div>
-                <div class="options">
-                    <button @click="selectOption('Português')">Português</button>
-                    <button @click="selectOption('English')">English</button>
+                <div class="options" :style="{ display: optionsVisible ? 'flex' : 'none' }">
+                    <button @click="selectOption('1')">Português</button>
+                    <button @click="selectOption('2')">English</button>
                 </div>
             </div>
 
-            <!-- Campo de envio -->
             <div class="chat-footer">
                 <button @click="sendMessage">
                     <Paperclip class="iconFix" />
@@ -81,11 +129,12 @@
 
 <script setup>
 import { ref } from "vue";
-import { Paperclip, SendHorizonal } from "lucide-vue-next";
+import { MessageCircleMore, MessageSquareText, Paperclip, SendHorizonal } from "lucide-vue-next";
 
 const isChatOpen = ref(false);
 const newMessage = ref("");
 const messages = ref([]);
+const optionsVisible = ref(true)
 
 function sendMessage() {
     if (newMessage.value.trim() !== "") {
@@ -95,7 +144,8 @@ function sendMessage() {
 }
 
 function selectOption(option) {
-    messages.value.push(`Idioma selecionado: ${option}`);
+    messages.value.push(`${option}`);
+    optionsVisible.value = false
 }
 </script>
 
@@ -153,6 +203,7 @@ function selectOption(option) {
     font-size: 1.3rem;
 }
 
+
 .close-btn {
     background: transparent;
     border: none;
@@ -160,12 +211,60 @@ function selectOption(option) {
     font-size: 18px;
     cursor: pointer;
 }
-
-/* Corpo */
 .chat-body {
     padding: 10px;
     flex: 1;
     overflow-y: auto;
+    max-height: 60vh;
+}
+
+.icon-symbol {
+    width: 20px;
+    color: #fff;
+}
+
+.container-messages {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border: 0px solid black;
+}
+
+.msg-symbol {
+    background-color: #aaa;
+    height: 40px;
+    max-width: 40px;
+    min-width: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+.data-share-msg {
+    display: flex;
+    color: #777;
+    font-size: 12px;
+    align-items: center;
+    margin: 5px 0px;
+
+}
+
+.data-share-msg.user-hours{
+    justify-content: flex-end;
+}
+
+
+.separateMsg {
+    width: 3px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 5px 3px;
+    border-radius: 100%;
 }
 
 .chat-message {
@@ -193,11 +292,14 @@ function selectOption(option) {
     max-width: 70%;
     min-width: 0px;
     padding: 15px;
+    /* border: 1px solid red; */
 }
 
 .chat-message.bot .message .msg {
     background: var(--bg-chat);
     border-top-left-radius: 0px;
+    max-width: 70%;
+    min-width: 0px;
 }
 
 .chat-message.user .message .msg {
@@ -236,6 +338,7 @@ function selectOption(option) {
     outline: none;
 }
 
+
 .chat-footer button {
     background: transparent;
     border: none;
@@ -261,5 +364,10 @@ function selectOption(option) {
     text-align: center;
     padding: 10px 0px;
     color: #777;
+}
+
+.iconMsg {
+    stroke-width: 2;
+    width: 25px;
 }
 </style>
