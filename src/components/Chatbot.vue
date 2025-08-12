@@ -74,11 +74,7 @@
                                     </div>
                                 </div>
 
-                                <div class="message">
-                                    <div class="msg">
-                                        Escolha
-                                    </div>
-                                </div>
+                                
 
                             </div>
                             <div class="data-share-msg">
@@ -151,7 +147,7 @@ function selectOption(option) {
 
 <style>
 :root {
-    --main-color: #ef4444;
+    --main-color: #2f43ff;  
     --bg-chat: #f0f0f0;
     --bg-user: #f0f0f0;
     --gray-icons: #888;
@@ -241,7 +237,7 @@ function selectOption(option) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
 }
 
