@@ -7,7 +7,7 @@
 
         <div class="grid grid-cols-12 gap-4 justify-between mt-20 md:mt-0">
             <div class="col-span-12 lg:col-span-4 p-0 md:p-4">
-                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
+                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 duration-300 transition-all cards-hover-main" style="border-radius: 10px">
                     <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Diurno</div>
                     <img src="/demo/images/landing/free.svg" class="w-10/12 mx-auto" alt="free" />
                     <div class="my-8 flex flex-col items-center gap-4">
@@ -15,7 +15,7 @@
                             <span class="text-2xl font-bold mr-2 text-surface-900 dark:text-surface-0">50,00MZN</span>
                             <span class="text-surface-600 dark:text-surface-200">Por mês</span>
                         </div>
-                        <Button label="Adequirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
+                        <Button label="adquirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white" style="background-color: var(--main-color); border: 1px solid var(--main-color);"></Button>
                     </div>
                     <Divider class="w-full bg-surface-200"></Divider>
                     <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
@@ -36,7 +36,7 @@
             </div>
 
             <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
+                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 duration-300 transition-all cards-hover-main" style="border-radius: 10px">
                     <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Noturno</div>
                     <img src="/demo/images/landing/startup.svg" class="w-10/12 mx-auto" alt="startup" />
                     <div class="my-8 flex flex-col items-center gap-4">
@@ -44,7 +44,7 @@
                             <span class="text-2xl font-bold mr-2 text-surface-900 dark:text-surface-0">50,00MZN</span>
                             <span class="text-surface-600 dark:text-surface-200">Por mês</span>
                         </div>
-                        <Button label="Adequirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
+                        <Button label="adquirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white" style="background-color: var(--main-color); border: 1px solid var(--main-color);"></Button>
                     </div>
                     <Divider class="w-full bg-surface-200"></Divider>
                     <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="col-span-12 lg:col-span-4 p-0 md:p-4 mt-6 md:mt-0">
-                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 hover:border-primary duration-300 transition-all" style="border-radius: 10px">
+                <div class="p-4 flex flex-col border-surface-200 dark:border-surface-600 pricing-card cursor-pointer border-2 duration-300 transition-all cards-hover-main" style="border-radius: 10px">
                     <div class="text-surface-900 dark:text-surface-0 text-center my-8 text-3xl">Ensino a Distância </div>
                     <img src="/demo/images/landing/enterprise.svg" class="w-10/12 mx-auto" alt="enterprise" />
                     <div class="my-8 flex flex-col items-center gap-4">
@@ -74,7 +74,7 @@
                             <span class="text-2xl font-bold mr-2 text-surface-900 dark:text-surface-0">50,00MZN</span>
                             <span class="text-surface-600 dark:text-surface-200">Por mês</span>
                         </div>
-                        <Button label="Adequirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white"></Button>
+                        <Button label="adquirir" class="p-button-rounded border-0 ml-4 font-light leading-tight bg-blue-500 text-white" style="background-color: var(--main-color); border: 1px solid var(--main-color);"></Button>
                     </div>
                     <Divider class="w-full bg-surface-200"></Divider>
                     <ul class="my-8 list-none p-0 flex text-surface-900 dark:text-surface-0 flex-col px-8">

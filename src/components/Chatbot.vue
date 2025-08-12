@@ -123,7 +123,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import { MessageCircleMore, MessageSquareText, Paperclip, SendHorizonal } from "lucide-vue-next";
 
@@ -144,16 +144,6 @@ function selectOption(option) {
     optionsVisible.value = false
 }
 </script>
-
-<style>
-:root {
-    --main-color: #2f43ff;  
-    --bg-chat: #f0f0f0;
-    --bg-user: #f0f0f0;
-    --gray-icons: #888;
-}
-</style>
-
 <style scoped>
 .chat-button {
     position: fixed;

@@ -7,7 +7,7 @@
         <div class="mx-6 md:mx-20 mt-0 md:mt-6">
             <h1 class="text-6xl font-bold text-gray-900 leading-tight"><span class="font-light block">Sua jornada acadêmica </span>começa aqui.</h1>
             <p class="font-normal text-2xl leading-normal md:mt-4 text-gray-700">Aprendizado, inovação e oportunidades para você.</p>
-            <Button label="Comece" as="router-link" to="/" rounded class="!text-xl mt-8 !px-4"></Button>
+            <Button label="Comece" as="router-link" to="/" rounded class="!text-xl mt-8 !px-4" style="background-color: var(--main-color); border: 1px solid var(--main-color);"></Button>
         </div>
         <div class="flex justify-center md:justify-end">
             <img src="/demo/images/landing/screen-1.png" alt="Hero Image" class="w-9/12 md:w-auto" />
